@@ -222,15 +222,23 @@ img { max-width: 100%; display: block; }
   50% { transform: translateY(-6px); }
 }
 
-.scene-card {
+.test-shell {
+  transition: padding-bottom .2s ease;
+}
+
+.stage-card {
   background: linear-gradient(160deg, var(--card), var(--bg-soft));
   border: 1px solid rgba(255,255,255,.07);
   border-radius: var(--radius);
-  padding: 28px 24px;
+  padding: 34px 24px 30px;
   box-shadow: var(--shadow);
   animation: sceneIn .45s cubic-bezier(.22,1,.36,1);
+  min-height: 46vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.scene-card.scene-exit {
+.stage-card.scene-exit {
   animation: sceneOut .22s ease forwards;
 }
 @keyframes sceneIn {
@@ -248,15 +256,28 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
   text-transform: uppercase;
   opacity: .85;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.stage-visual {
+  text-align: center;
+  margin: 6px 0 22px;
+}
+.stage-visual .stage-emoji {
+  display: inline-block;
+  font-size: 64px;
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
+  animation: floatY 3.4s ease-in-out infinite;
 }
 
 .scene-text {
-  font-size: 16.5px;
-  margin: 0 0 22px;
+  font-size: 17px;
+  margin: 0;
   white-space: pre-line;
   min-height: 3.2em;
   cursor: default;
+  text-align: center;
 }
 .scene-text.typing::after {
   content: "▌";
@@ -267,15 +288,45 @@ img { max-width: 100%; display: block; }
 }
 @keyframes blink { 50% { opacity: 0; } }
 
-.choice-list {
+/* 선택지 하단 도크: 상황(위)과 선택(아래)을 분리해 보여줌 */
+.choice-dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, transparent, var(--bg-soft) 35%, var(--bg) 100%);
+  z-index: 50;
+  transform: translateY(105%);
+  transition: transform .35s cubic-bezier(.22,1,.36,1);
+  pointer-events: none;
+}
+.choice-dock.dock-visible {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.choice-dock-inner {
+  width: 100%;
+  max-width: var(--max-w);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+.choice-dock-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
 .choice-btn {
   text-align: left;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
   color: var(--text);
   border-radius: 14px;
   padding: 14px 16px;

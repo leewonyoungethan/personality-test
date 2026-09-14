@@ -85,10 +85,14 @@ window.PT = window.PT || { tests: {} };
     const scene = test.scenes[sceneIndex];
     let html = renderHeader();
     html +=
-      '<div class="scene-card" id="scene-card">' +
+      '<div class="stage-card" id="scene-card">' +
       '<div class="scene-tag">SCENE ' + String(sceneIndex + 1).padStart(2, "0") + "</div>" +
+      '<div class="stage-visual"><span class="stage-emoji">' + test.emoji + "</span></div>" +
       '<p class="scene-text" id="scene-text"></p>' +
-      '<div class="choice-list" id="choice-list" hidden>';
+      "</div>";
+    html +=
+      '<div class="choice-dock" id="choice-dock"><div class="choice-dock-inner" id="choice-list">' +
+      '<div class="choice-dock-label">어떻게 할까요?</div>';
     scene.choices.forEach((choice, i) => {
       html += '<button class="choice-btn" data-i="' + i + '">' + escapeHtml(choice.label) + "</button>";
     });
@@ -98,9 +102,12 @@ window.PT = window.PT || { tests: {} };
     const textEl = document.getElementById("scene-text");
     const listEl = document.getElementById("choice-list");
     const cardEl = document.getElementById("scene-card");
+    const dockEl = document.getElementById("choice-dock");
+
+    shell.style.paddingBottom = dockEl.offsetHeight + 20 + "px";
 
     function revealChoices() {
-      listEl.hidden = false;
+      dockEl.classList.add("dock-visible");
       listEl.querySelectorAll(".choice-btn").forEach((btn, idx) => {
         btn.style.animationDelay = idx * 0.09 + "s";
         btn.classList.add("choice-reveal");
@@ -109,8 +116,7 @@ window.PT = window.PT || { tests: {} };
 
     typeText(scene.text, textEl, revealChoices);
 
-    cardEl.addEventListener("click", (e) => {
-      if (e.target.closest(".choice-btn")) return;
+    cardEl.addEventListener("click", () => {
       if (!typingDone) skipTyping(scene.text, textEl, revealChoices);
     });
 
@@ -122,12 +128,14 @@ window.PT = window.PT || { tests: {} };
         scores.B += choice.points.B || 0;
         scores.C += choice.points.C || 0;
         cardEl.classList.add("scene-exit");
+        dockEl.classList.remove("dock-visible");
         window.scrollTo({ top: 0, behavior: "smooth" });
         setTimeout(() => {
           sceneIndex++;
           if (sceneIndex < totalScenes) {
             renderScene();
           } else {
+            shell.style.paddingBottom = "";
             renderResult();
           }
         }, 220);
