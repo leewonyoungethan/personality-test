@@ -94,7 +94,7 @@ window.PT = window.PT || { tests: {} };
       '<div class="stage-card" id="scene-card">' +
       '<div class="scene-tag">SCENE ' + String(sceneIndex + 1).padStart(2, "0") + "</div>" +
       '<div class="stage-visual">' + renderVisual(scene.visual) + "</div>" +
-      '<p class="scene-text" id="scene-text"></p>' +
+      '<div class="scene-caption"><p class="scene-text" id="scene-text"></p></div>' +
       "</div>";
     html +=
       '<div class="choice-dock" id="choice-dock"><div class="choice-dock-inner" id="choice-list">' +
