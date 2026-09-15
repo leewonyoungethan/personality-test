@@ -47,6 +47,7 @@ window.PT.tests["island"] = {
   scenes: [
     {
       text: "파도에 휩쓸려 정신을 차리니, 낯선 해변에 혼자 누워 있다. 멀리 동료들의 목소리가 들린다.",
+      visual: { emojis: ["🌊", "🧍"], anim: "shake" },
       choices: [
         { label: "일단 몸을 일으켜 주변 지형부터 살핀다", points: { A: 2, B: 1, C: 0 } },
         { label: "목소리가 들리는 방향을 침착하게 가늠한다", points: { A: 0, B: 2, C: 1 } },
@@ -55,6 +56,7 @@ window.PT.tests["island"] = {
     },
     {
       text: "모두 모였지만 식수가 부족하다. 섬 안쪽에 물소리가 들리는 것 같기도 하다.",
+      visual: { emojis: ["💧", "🌿"], anim: "flicker" },
       choices: [
         { label: "혼자 먼저 소리를 따라가 수원을 확인한다", points: { A: 2, B: 1, C: 0 } },
         { label: "나뭇잎의 물기를 모으는 방법을 제안한다", points: { A: 0, B: 2, C: 1 } },
@@ -63,6 +65,7 @@ window.PT.tests["island"] = {
     },
     {
       text: "해 질 무렵, 비바람이 몰려올 것 같다. 당장 쉴 곳이 필요하다.",
+      visual: { emojis: ["🌧️", "🏚️"], anim: "shake" },
       choices: [
         { label: "맨손으로 나뭇가지를 모아 바로 움막을 짓기 시작한다", points: { A: 2, B: 1, C: 0 } },
         { label: "지형을 보고 바람을 덜 맞는 위치를 먼저 정한다", points: { A: 0, B: 2, C: 1 } },
@@ -71,6 +74,7 @@ window.PT.tests["island"] = {
     },
     {
       text: "모닥불을 피우려는데, 부싯돌도 라이터도 없다. 시간이 얼마 남지 않았다.",
+      visual: { emojis: ["🔥", "🪵"], anim: "flicker" },
       choices: [
         { label: "나무 마찰로 불을 피우는 걸 직접 시도한다", points: { A: 2, B: 1, C: 0 } },
         { label: "렌즈 역할을 할 물건이 있는지 짐을 분석한다", points: { A: 0, B: 2, C: 1 } },
@@ -79,6 +83,7 @@ window.PT.tests["island"] = {
     },
     {
       text: "낯선 열매를 발견했다. 먹을 수 있는 건지 아무도 확신하지 못한다.",
+      visual: { emojis: ["🍈", "❓"], anim: "bounce" },
       choices: [
         { label: "조금 베어 물어 직접 맛과 반응을 확인한다", points: { A: 2, B: 1, C: 0 } },
         { label: "열매의 색과 향, 모양의 특징을 꼼꼼히 따져본다", points: { A: 0, B: 2, C: 1 } },
@@ -87,6 +92,7 @@ window.PT.tests["island"] = {
     },
     {
       text: "동료 한 명이 다쳐서 움직이기 힘들어한다. 구조 신호를 보낼 시간도 빠듯하다.",
+      visual: { emojis: ["🩹", "📡"], anim: "pulse" },
       choices: [
         { label: "일단 혼자 높은 곳에 올라가 신호를 보낸다", points: { A: 2, B: 1, C: 0 } },
         { label: "상처 상태를 보고 치료 순서를 정리한다", points: { A: 0, B: 2, C: 1 } },
@@ -95,6 +101,7 @@ window.PT.tests["island"] = {
     },
     {
       text: "멀리 수평선에서 배의 불빛이 스쳐 지나간다. 신호를 보낼 시간은 단 몇 분뿐.",
+      visual: { emojis: ["🚢", "💡"], anim: "pulse" },
       choices: [
         { label: "젖은 옷이든 뭐든 바로 흔들며 뛰어나간다", points: { A: 2, B: 1, C: 0 } },
         { label: "가장 눈에 잘 띄는 신호 방법을 빠르게 판단한다", points: { A: 0, B: 2, C: 1 } },
@@ -103,6 +110,7 @@ window.PT.tests["island"] = {
     },
     {
       text: "마침내 구조선이 해변에 닿는다. 누군가 당신에게 묻는다. \"가장 힘들었던 순간엔 뭘 생각했어?\"",
+      visual: { emojis: ["🛟", "🌅"], anim: "float" },
       choices: [
         { label: "\"어떻게든 버텨내자는 생각뿐이었다\"고 답한다", points: { A: 2, B: 1, C: 0 } },
         { label: "\"다음엔 뭘 해야 할지 계속 계산했다\"고 답한다", points: { A: 0, B: 2, C: 1 } },

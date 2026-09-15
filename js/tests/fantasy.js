@@ -47,6 +47,7 @@ window.PT.tests["fantasy"] = {
   scenes: [
     {
       text: "낡은 탑의 성문 앞에 섰다. 문에는 세 개의 손잡이가 있고, 각각 다른 문양이 새겨져 있다.",
+      visual: { emojis: ["🚪", "✨"], anim: "pulse" },
       choices: [
         { label: "사자 문양의 손잡이를 주저 없이 당긴다", points: { A: 2, B: 1, C: 0 } },
         { label: "문에 새겨진 고대 문자를 먼저 해석해본다", points: { A: 0, B: 2, C: 1 } },
@@ -55,6 +56,7 @@ window.PT.tests["fantasy"] = {
     },
     {
       text: "탑 안, 바닥이 통째로 사라진 계단. 건너편까지는 아슬아슬한 돌기둥들이 이어져 있다.",
+      visual: { emojis: ["🪨", "🕳️"], anim: "slide" },
       choices: [
         { label: "속도를 붙여 곧장 뛰어 건너간다", points: { A: 2, B: 1, C: 0 } },
         { label: "돌기둥의 무게 중심을 먼저 계산해본다", points: { A: 0, B: 2, C: 1 } },
@@ -63,6 +65,7 @@ window.PT.tests["fantasy"] = {
     },
     {
       text: "수정 방에서 세 개의 물약을 발견했다. 색이 다를 뿐, 라벨은 붙어있지 않다.",
+      visual: { emojis: ["🧪", "✨"], anim: "flicker" },
       choices: [
         { label: "가장 강렬한 빛을 내는 물약을 바로 마신다", points: { A: 2, B: 1, C: 0 } },
         { label: "냄새와 점도를 비교해 성분을 유추한다", points: { A: 0, B: 2, C: 1 } },
@@ -71,6 +74,7 @@ window.PT.tests["fantasy"] = {
     },
     {
       text: "거대한 골렘이 통로를 막고 서 있다. 골렘의 눈이 서서히 당신을 향해 돌아간다.",
+      visual: { emojis: ["🗿", "💥"], anim: "shake" },
       choices: [
         { label: "정면으로 걸어가 눈을 똑바로 마주본다", points: { A: 2, B: 1, C: 0 } },
         { label: "골렘 가슴팍의 룬 문양이 약점임을 알아챈다", points: { A: 0, B: 2, C: 1 } },
@@ -79,6 +83,7 @@ window.PT.tests["fantasy"] = {
     },
     {
       text: "서재에서 낡은 일기장을 발견했다. 마지막 페이지에 이상한 경고문이 적혀 있다.",
+      visual: { emojis: ["📖", "🕯️"], anim: "flicker" },
       choices: [
         { label: "경고를 무시하고 마지막 장을 마저 읽는다", points: { A: 2, B: 1, C: 0 } },
         { label: "일기 속 단서를 앞장부터 차근차근 정리한다", points: { A: 0, B: 2, C: 1 } },
@@ -87,6 +92,7 @@ window.PT.tests["fantasy"] = {
     },
     {
       text: "갈림길에서 작은 정령이 나타나 수수께끼를 낸다. \"답을 맞히면 지름길을, 틀리면 함정을 얻는다.\"",
+      visual: { emojis: ["🧚", "❓"], anim: "bounce" },
       choices: [
         { label: "고민 없이 직감이 이끄는 답을 외친다", points: { A: 2, B: 1, C: 0 } },
         { label: "수수께끼의 구조를 분석해 논리적으로 푼다", points: { A: 0, B: 2, C: 1 } },
@@ -95,6 +101,7 @@ window.PT.tests["fantasy"] = {
     },
     {
       text: "탑의 그림자 속에서 또 다른 '나'가 나타나 거울처럼 당신을 흉내 낸다.",
+      visual: { emojis: ["🌑", "👤"], anim: "pulse" },
       choices: [
         { label: "망설임 없이 그림자를 향해 나아간다", points: { A: 2, B: 1, C: 0 } },
         { label: "그림자의 움직임에서 규칙을 찾아낸다", points: { A: 0, B: 2, C: 1 } },
@@ -103,6 +110,7 @@ window.PT.tests["fantasy"] = {
     },
     {
       text: "드디어 탑의 정상. 낡은 왕관이 놓인 제단 앞에서, 마지막 목소리가 묻는다. \"너는 무엇을 위해 여기까지 왔는가?\"",
+      visual: { emojis: ["👑", "✨"], anim: "pulse" },
       choices: [
         { label: "\"내 힘을 시험하기 위해서다\"라고 답한다", points: { A: 2, B: 1, C: 0 } },
         { label: "\"탑의 진실을 알기 위해서다\"라고 답한다", points: { A: 0, B: 2, C: 1 } },

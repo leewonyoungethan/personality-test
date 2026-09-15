@@ -81,13 +81,19 @@ window.PT = window.PT || { tests: {} };
     }
   }
 
+  function renderVisual(visual) {
+    const v = visual || { emojis: [test.emoji], anim: "float" };
+    const spans = v.emojis.map((e) => "<span>" + e + "</span>").join("");
+    return '<div class="visual-fx fx-' + v.anim + '">' + spans + "</div>";
+  }
+
   function renderScene() {
     const scene = test.scenes[sceneIndex];
     let html = renderHeader();
     html +=
       '<div class="stage-card" id="scene-card">' +
       '<div class="scene-tag">SCENE ' + String(sceneIndex + 1).padStart(2, "0") + "</div>" +
-      '<div class="stage-visual"><span class="stage-emoji">' + test.emoji + "</span></div>" +
+      '<div class="stage-visual">' + renderVisual(scene.visual) + "</div>" +
       '<p class="scene-text" id="scene-text"></p>' +
       "</div>";
     html +=

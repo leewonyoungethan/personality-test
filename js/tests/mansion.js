@@ -47,6 +47,7 @@ window.PT.tests["mansion"] = {
   scenes: [
     {
       text: "낡은 철문을 밀고 들어서자, 등 뒤에서 문이 저절로 닫힌다. 복도 끝에 희미한 불빛이 보인다.",
+      visual: { emojis: ["🚪", "🕯️"], anim: "flicker" },
       choices: [
         { label: "심장이 뛰지만 일단 불빛 쪽으로 걸어간다", points: { A: 2, B: 1, C: 0 } },
         { label: "문이 닫힌 방식이 이상하다고 느끼며 살핀다", points: { A: 0, B: 2, C: 1 } },
@@ -55,6 +56,7 @@ window.PT.tests["mansion"] = {
     },
     {
       text: "거실 벽에 걸린 초상화의 눈이 당신을 따라 움직이는 것 같다.",
+      visual: { emojis: ["🖼️", "👁️"], anim: "pulse" },
       choices: [
         { label: "애써 무시하며 다음 방으로 향한다", points: { A: 2, B: 1, C: 0 } },
         { label: "초상화를 가까이서 자세히 관찰한다", points: { A: 0, B: 2, C: 1 } },
@@ -63,6 +65,7 @@ window.PT.tests["mansion"] = {
     },
     {
       text: "서재에서 찢겨진 편지를 발견했다. 누군가 급하게 숨기려 한 흔적이 있다.",
+      visual: { emojis: ["📜", "✂️"], anim: "shake" },
       choices: [
         { label: "동요 없이 편지를 끝까지 찬찬히 읽는다", points: { A: 2, B: 1, C: 0 } },
         { label: "찢긴 단면을 맞춰가며 내용을 복원해본다", points: { A: 0, B: 2, C: 1 } },
@@ -71,6 +74,7 @@ window.PT.tests["mansion"] = {
     },
     {
       text: "지하로 내려가는 계단에서 알 수 없는 흐느낌 소리가 들려온다.",
+      visual: { emojis: ["🕳️", "👂"], anim: "flicker" },
       choices: [
         { label: "소리를 무시하지 못하고 곧장 내려가 본다", points: { A: 2, B: 1, C: 0 } },
         { label: "소리의 방향과 패턴을 먼저 분석해본다", points: { A: 0, B: 2, C: 1 } },
@@ -79,6 +83,7 @@ window.PT.tests["mansion"] = {
     },
     {
       text: "갑자기 모든 촛불이 동시에 꺼졌다. 어둠 속에서 발소리가 들린다.",
+      visual: { emojis: ["🕯️", "👣"], anim: "flicker" },
       choices: [
         { label: "침착하게 숨을 고르고 제자리에 멈춰 선다", points: { A: 2, B: 1, C: 0 } },
         { label: "발소리의 보폭과 방향으로 상대를 가늠한다", points: { A: 0, B: 2, C: 1 } },
@@ -87,6 +92,7 @@ window.PT.tests["mansion"] = {
     },
     {
       text: "비밀 통로 안쪽에서 저택 주인의 일기장을 발견했다. 마지막 장엔 당신의 이름이 적혀 있다.",
+      visual: { emojis: ["📖", "❗"], anim: "pulse" },
       choices: [
         { label: "놀랍지만 침착하게 일기를 끝까지 읽는다", points: { A: 2, B: 1, C: 0 } },
         { label: "어떻게 이름을 알았는지 단서를 추적한다", points: { A: 0, B: 2, C: 1 } },
@@ -95,6 +101,7 @@ window.PT.tests["mansion"] = {
     },
     {
       text: "저택의 진짜 주인으로 보이는 존재가 마침내 모습을 드러낸다.",
+      visual: { emojis: ["👻", "🕯️"], anim: "shake" },
       choices: [
         { label: "두려움을 누르고 똑바로 마주 선다", points: { A: 2, B: 1, C: 0 } },
         { label: "그 존재의 정체와 목적을 먼저 묻는다", points: { A: 0, B: 2, C: 1 } },
@@ -103,6 +110,7 @@ window.PT.tests["mansion"] = {
     },
     {
       text: "저택을 빠져나오기 직전, 존재가 마지막으로 묻는다. \"왜 끝까지 도망치지 않았지?\"",
+      visual: { emojis: ["❓", "🌙"], anim: "float" },
       choices: [
         { label: "\"이미 각오하고 들어온 거니까\"라고 답한다", points: { A: 2, B: 1, C: 0 } },
         { label: "\"진실을 알기 전엔 멈출 수 없었다\"고 답한다", points: { A: 0, B: 2, C: 1 } },

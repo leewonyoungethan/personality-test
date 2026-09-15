@@ -47,6 +47,7 @@ window.PT.tests["school"] = {
   scenes: [
     {
       text: "야자가 끝난 줄 알았는데, 복도 불이 하나씩 꺼지기 시작한다. 교실엔 당신과 친구들뿐.",
+      visual: { emojis: ["💡", "🚪"], anim: "flicker" },
       choices: [
         { label: "무섭지만 애써 웃으며 먼저 문 쪽으로 간다", points: { A: 2, B: 1, C: 0 } },
         { label: "불이 꺼지는 순서에 이상한 규칙이 있음을 눈치챈다", points: { A: 0, B: 2, C: 1 } },
@@ -55,6 +56,7 @@ window.PT.tests["school"] = {
     },
     {
       text: "3층 화장실에서 들린다는 '소문'이 떠올랐다. 마침 지금, 그 화장실 앞을 지나야 한다.",
+      visual: { emojis: ["🚪", "😱"], anim: "shake" },
       choices: [
         { label: "무서워도 빠르게 숨을 참고 지나간다", points: { A: 2, B: 1, C: 0 } },
         { label: "화장실 안쪽의 기척을 먼저 살핀다", points: { A: 0, B: 2, C: 1 } },
@@ -63,6 +65,7 @@ window.PT.tests["school"] = {
     },
     {
       text: "음악실에서 아무도 없는데 피아노 소리가 들려온다.",
+      visual: { emojis: ["🎹", "🎵"], anim: "bounce" },
       choices: [
         { label: "궁금함을 못 이기고 문을 살짝 열어본다", points: { A: 2, B: 1, C: 0 } },
         { label: "연주 소리의 패턴이 녹음인지 아닌지 구별해본다", points: { A: 0, B: 2, C: 1 } },
@@ -71,6 +74,7 @@ window.PT.tests["school"] = {
     },
     {
       text: "계단 수를 세면 안 된다는 오래된 금기가 있다. 그런데 친구가 실수로 숫자를 세고 말았다.",
+      visual: { emojis: ["🪜", "❗"], anim: "shake" },
       choices: [
         { label: "별일 없을 거라며 대수롭지 않게 넘긴다", points: { A: 2, B: 1, C: 0 } },
         { label: "금기의 유래를 떠올리며 진위를 따져본다", points: { A: 0, B: 2, C: 1 } },
@@ -79,6 +83,7 @@ window.PT.tests["school"] = {
     },
     {
       text: "과학실 창문에 누군가의 얼굴이 비쳤다가 사라졌다. 다들 얼음이 된 채 서 있다.",
+      visual: { emojis: ["🪟", "👤"], anim: "flicker" },
       choices: [
         { label: "먼저 정신을 차리고 창문 쪽으로 다가간다", points: { A: 2, B: 1, C: 0 } },
         { label: "유리의 반사각을 따져 착시인지 확인한다", points: { A: 0, B: 2, C: 1 } },
@@ -87,6 +92,7 @@ window.PT.tests["school"] = {
     },
     {
       text: "학교 괴담의 '그 선배'가 진짜로 나타났다는 목격담이 퍼진다. 다음 교실로 가야 한다.",
+      visual: { emojis: ["👥", "😨"], anim: "shake" },
       choices: [
         { label: "무섭지만 일단 앞장서서 이동을 시작한다", points: { A: 2, B: 1, C: 0 } },
         { label: "목격담 속 공통된 디테일을 비교해본다", points: { A: 0, B: 2, C: 1 } },
@@ -95,6 +101,7 @@ window.PT.tests["school"] = {
     },
     {
       text: "옥상 문이 원래는 잠겨 있어야 하는데, 살짝 열려 바람에 덜컹거린다.",
+      visual: { emojis: ["🚪", "🌬️"], anim: "pulse" },
       choices: [
         { label: "호기심을 참지 못하고 옥상 문을 열어본다", points: { A: 2, B: 1, C: 0 } },
         { label: "문이 열린 이유를 자물쇠부터 확인해본다", points: { A: 0, B: 2, C: 1 } },
@@ -103,6 +110,7 @@ window.PT.tests["school"] = {
     },
     {
       text: "정문을 나서기 직전, 누군가 묻는다. \"오늘 밤, 제일 기억에 남는 순간이 뭐야?\"",
+      visual: { emojis: ["🌙", "🏫"], anim: "float" },
       choices: [
         { label: "\"무서워도 끝까지 버틴 내 자신\"이라 답한다", points: { A: 2, B: 1, C: 0 } },
         { label: "\"하나씩 맞춰지던 단서들\"이라 답한다", points: { A: 0, B: 2, C: 1 } },

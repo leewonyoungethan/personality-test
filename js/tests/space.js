@@ -47,6 +47,7 @@ window.PT.tests["space"] = {
   scenes: [
     {
       text: "착륙 직후, 모선과의 통신이 끊겼다. 선내 경고음이 낮게 울린다.",
+      visual: { emojis: ["🚨", "📡"], anim: "flicker" },
       choices: [
         { label: "일단 경고음의 진원지로 곧장 향한다", points: { A: 2, B: 1, C: 0 } },
         { label: "통신 로그를 먼저 확인해 원인을 추적한다", points: { A: 0, B: 2, C: 1 } },
@@ -55,6 +56,7 @@ window.PT.tests["space"] = {
     },
     {
       text: "행성 표면에 정체불명의 구조물이 발견됐다. 지도에도 없는 곳이다.",
+      visual: { emojis: ["🛰️", "❓"], anim: "pulse" },
       choices: [
         { label: "망설임 없이 가까이 다가가 살펴본다", points: { A: 2, B: 1, C: 0 } },
         { label: "구조물의 재질과 패턴을 스캔해 분석한다", points: { A: 0, B: 2, C: 1 } },
@@ -63,6 +65,7 @@ window.PT.tests["space"] = {
     },
     {
       text: "동력 장치에 이상이 생겼다. 수리법은 두 가지, 시간은 충분치 않다.",
+      visual: { emojis: ["⚙️", "⚡"], anim: "shake" },
       choices: [
         { label: "감으로 가장 빠를 것 같은 방법을 바로 시도한다", points: { A: 2, B: 1, C: 0 } },
         { label: "매뉴얼을 대조하며 정석대로 수리를 시작한다", points: { A: 0, B: 2, C: 1 } },
@@ -71,6 +74,7 @@ window.PT.tests["space"] = {
     },
     {
       text: "동굴 깊은 곳에서 낯선 생체 신호가 감지된다. 위험할 수도, 기회일 수도 있다.",
+      visual: { emojis: ["🦠", "📶"], anim: "flicker" },
       choices: [
         { label: "직접 다가가 신호의 정체를 확인한다", points: { A: 2, B: 1, C: 0 } },
         { label: "신호의 패턴을 분석해 위험도를 가늠한다", points: { A: 0, B: 2, C: 1 } },
@@ -79,6 +83,7 @@ window.PT.tests["space"] = {
     },
     {
       text: "탐사대 안에서 다음 경로를 두고 의견이 둘로 나뉘었다.",
+      visual: { emojis: ["🧭", "❗"], anim: "bounce" },
       choices: [
         { label: "논쟁을 끝내고 당신의 판단대로 밀고 나간다", points: { A: 2, B: 1, C: 0 } },
         { label: "각 경로의 장단점을 표로 정리해 설명한다", points: { A: 0, B: 2, C: 1 } },
@@ -87,6 +92,7 @@ window.PT.tests["space"] = {
     },
     {
       text: "산소 농도가 예상보다 빠르게 떨어지고 있다. 선택의 시간이 많지 않다.",
+      visual: { emojis: ["🫧", "⏳"], anim: "shake" },
       choices: [
         { label: "일단 가장 가까운 출구를 향해 전원 이동시킨다", points: { A: 2, B: 1, C: 0 } },
         { label: "산소 소비 데이터를 계산해 최적 경로를 찾는다", points: { A: 0, B: 2, C: 1 } },
@@ -95,6 +101,7 @@ window.PT.tests["space"] = {
     },
     {
       text: "마침내 구조물 중심부에서 거대한 신호 송신기를 발견했다.",
+      visual: { emojis: ["📡", "✨"], anim: "pulse" },
       choices: [
         { label: "직접 장치를 조작해 즉시 신호를 되살린다", points: { A: 2, B: 1, C: 0 } },
         { label: "장치의 회로도를 먼저 분석하고 접근한다", points: { A: 0, B: 2, C: 1 } },
@@ -103,6 +110,7 @@ window.PT.tests["space"] = {
     },
     {
       text: "모선과 다시 연결된 순간, 지휘부가 묻는다. \"이번 임무에서 가장 중요했던 건 뭐였나?\"",
+      visual: { emojis: ["📶", "🌌"], anim: "float" },
       choices: [
         { label: "\"판단하고 행동하는 속도였다\"고 답한다", points: { A: 2, B: 1, C: 0 } },
         { label: "\"끝까지 데이터를 믿는 것이었다\"고 답한다", points: { A: 0, B: 2, C: 1 } },
