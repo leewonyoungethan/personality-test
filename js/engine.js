@@ -92,6 +92,7 @@ window.PT = window.PT || { tests: {} };
     let html = renderHeader();
     html +=
       '<div class="stage-card" id="scene-card">' +
+      '<div class="stage-bg"></div>' +
       '<div class="scene-tag">SCENE ' + String(sceneIndex + 1).padStart(2, "0") + "</div>" +
       '<div class="stage-visual">' + renderVisual(scene.visual) + "</div>" +
       '<div class="scene-caption"><p class="scene-text" id="scene-text"></p></div>' +
@@ -111,6 +112,9 @@ window.PT = window.PT || { tests: {} };
     const dockEl = document.getElementById("choice-dock");
 
     shell.style.paddingBottom = dockEl.offsetHeight + 20 + "px";
+    const cardTop = cardEl.getBoundingClientRect().top;
+    const available = window.innerHeight - cardTop - dockEl.offsetHeight - 24;
+    cardEl.style.minHeight = Math.max(280, available) + "px";
 
     function revealChoices() {
       dockEl.classList.add("dock-visible");

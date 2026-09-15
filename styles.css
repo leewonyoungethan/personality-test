@@ -236,6 +236,46 @@ img { max-width: 100%; display: block; }
   min-height: 68vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255,255,255,.3), transparent 38%),
+    linear-gradient(180deg, var(--accent) 0%, transparent 48%);
+  opacity: .32;
+}
+.stage-bg::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: -6%;
+  height: 34%;
+  background: linear-gradient(180deg, transparent, var(--bg) 70%);
+  clip-path: polygon(
+    0% 100%, 0% 62%, 6% 48%, 14% 58%, 22% 32%, 31% 52%,
+    40% 24%, 50% 46%, 58% 18%, 68% 44%, 77% 28%, 86% 50%,
+    94% 20%, 100% 42%, 100% 100%
+  );
+  opacity: .95;
+}
+.stage-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 78% 78%, var(--accent-2), transparent 45%);
+  opacity: .28;
+  mix-blend-mode: screen;
+}
+
+.scene-tag, .stage-visual, .scene-caption {
+  position: relative;
+  z-index: 1;
 }
 .stage-card.scene-exit {
   animation: sceneOut .22s ease forwards;
